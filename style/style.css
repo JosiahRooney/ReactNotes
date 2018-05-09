@@ -1,0 +1,66 @@
+.app-title {
+  padding: 20px;
+}
+
+.note-list .add-note-btn {
+  margin-top: 20px;
+  margin-bottom: 60px;
+}
+
+.note {
+  position: relative;
+}
+
+.note,
+.note-detail {
+  border: 1px solid #aaa;
+}
+
+.note__body {
+  padding: 20px;
+}
+
+.note__body:hover {
+  background-color: rgba(0,0,0,.2);
+  cursor: pointer;
+}
+
+.note + .note {
+  margin-top: .9375rem;
+}
+
+.note p {
+  margin-bottom: 0;
+}
+
+.note-detail {
+  padding: 20px;
+}
+
+.note-detail input {
+  border: 0;
+  border-bottom: 1px solid #888;
+}
+
+.note-detail textarea {
+  border: 0;
+  padding: 5px;
+}
+
+.note-detail small {
+  font-size: 0.8rem;
+  font-weight: bold;
+  float: right;
+}
+
+.deleter {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.deleter:hover {
+  background-color: rgba(0,0,0,.2);
+}
