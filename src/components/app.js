@@ -48,7 +48,7 @@ export default class App extends Component {
   newNote() {
     return {
       title: "New Note",
-      text: "Enter text...",
+      text: "",
       snippet: "No additional text",
       createdAt: this.getTime(),
       editedAt: this.getTime(),
@@ -117,13 +117,13 @@ export default class App extends Component {
           </div>
         </div>
         <div className="row">
-          <NoteList notes={this.state.notes} handleClick={this.handleClick} handleNewNoteClick={this.handleNewNoteClick} getKey={this.getKey} handleRemoveNoteClick={this.handleRemoveNoteClick} />
+          <NoteList notes={this.state.notes} handleClick={this.handleClick} handleNewNoteClick={this.handleNewNoteClick} getKey={this.getKey} handleRemoveNoteClick={this.handleRemoveNoteClick} selectedNote={this.state.selectedNote} />
           <div className="note-detail col-md-7">
             <h2>
               <input type="text" value={title} onChange={this.handleTitleChange} /> <small className="edited-at text-muted">{this.state.selectedNote.editedAt}</small>
             </h2>
             <p>
-              <textarea cols="77" rows="30" value={this.state.selectedNote.text} onChange={this.handleBodyChange}></textarea>
+              <textarea className="note--input" value={this.state.selectedNote.text} onChange={this.handleBodyChange}></textarea>
             </p>
           </div>
         </div>

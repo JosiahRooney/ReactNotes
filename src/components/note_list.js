@@ -8,7 +8,9 @@ export default class NoteList extends Component {
 
   render() {
     let html = this.props.notes.map((note) => {
-      return <Note key={note.key} note={note} handleClick={e => {
+      let bool = false;
+      if (note.key === this.props.selectedNote.key) bool = true;
+      return <Note key={note.key} note={note} isActive={bool} handleClick={e => {
         this.props.handleClick(note)
       }} handleRemoveNoteClick={e => {
         e.preventDefault();
